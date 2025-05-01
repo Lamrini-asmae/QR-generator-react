@@ -1,17 +1,17 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import './App.css';
 import Nav from './components/Nav';
 import QrGenerator from './components/QrGenerator';  
 
 function App() {
   return (
-    <div className="app">
-      <Nav />  
+    <>
+      <Nav/>
       <main className="main">
         <QrGenerator />
       </main>
-    </div>
+    </>
   );
 }
-
 export default App;

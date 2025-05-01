@@ -1,49 +1,107 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-.app {
-  text-align: center;
+body.dark {
+  background-color: #121212;
+  color: #4e0909;
 }
 .navbar {
-  background-color: #282c34;
-  padding: 1rem;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  background-color: #1c819e;
+  color: #e4f4f0;
 }
-/* Form Section Styles */
-.main {
-  padding: 2rem;
+.logo {
+  height: 100px;
+  margin-right: 10px;
+}
+.toggle-wrapper {
+  width: 60px;
+  height: 30px;
+  background-color: #e4f4f0;
+  border-radius: 30px;
+  padding: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.toggle {
+  background-color: #489082;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.toggle.light {
+  transform: translateX(0);
+}
+.toggle.dark {
+  transform: translateX(30px);
+}
+.icon {
+  color: #e4f4f0;
+  font-size: 0.9375rem;
+}
+.qr-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
 }
 .qr-form {
   margin: 2rem auto;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; /* Changed from wrap to nowrap */
   gap: 0.5rem;
 }
 .qr-form input {
   padding: 0.5rem;
   font-size: 1rem;
-  width: 300px;
+  flex: 1 1 300px; /* Let it grow but prefer 300px */
+  max-width: 300px;
 }
-.qr-form button {
+button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
-}
-/* QR Display Section */
-.qr-display {
-  margin-top: 2rem;
-}
-.qr-display button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #489082;
+  color: #e4f4f0;
   border: none;
   border-radius: 5px;
+
 }
-.qr-display button:hover {
-  background-color: #45a049;
+.qr-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .qr-form {
+    flex-wrap: wrap;
+  }
+  .qr-form input,
+  .qr-form button {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .toggle-wrapper {
+    align-self: flex-end;
+  }
 }

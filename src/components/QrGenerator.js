@@ -7,7 +7,6 @@ function QrGenerator() {
   const [text, setText] = useState('');
   const [qrValue, setQrValue] = useState('');
   const qrRef = useRef(null);
-
   const handleGenerate = () => {
     setQrValue(text.trim());
   };
@@ -23,7 +22,6 @@ function QrGenerator() {
       console.error('Failed to download QR code:', err);
     }
   };
-
   return (
     <div className="qr-generator">
       <div className="qr-form">
@@ -35,18 +33,15 @@ function QrGenerator() {
         />
         <button onClick={handleGenerate}>Generate</button>
       </div>
-
       {qrValue && (
         <div className="qr-display">
           <div ref={qrRef} style={{ background: 'white', padding: '16px', display: 'inline-block' }}>
             <QRCode value={qrValue} size={180} />
           </div>
-          <br />
           <button onClick={handleDownload}>Download QR Code</button>
         </div>
       )}
     </div>
   );
 }
-
 export default QrGenerator;
