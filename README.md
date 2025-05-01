@@ -4,6 +4,8 @@
 
 This is a simple and clean QR Code Generator built using **React** and **CSS**. The app allows users to enter any text or URL (e.g., a Google Docs link or any website URL) , and it will generate a scannable QR code for the input.  Users can download the generated QR code as an image file for easy sharing and use. The app also includes a dark/light theme toggle, allowing users to switch between themes for a more comfortable viewing experience.
 
+<img width="935" alt="CodeQRGit" src="https://github.com/user-attachments/assets/0dd56588-4b2c-4ce9-91e1-6ed06d748f69" />
+
 ## Tech Stack
 
 - **React** - Frontend JavaScript library used to build the app.
@@ -20,5 +22,4 @@ Make sure you have **Node.js** and **npm** installed on your machine. You can ch
 node -v
 npm -v
 
-<img width="935" alt="CodeQRGit" src="https://github.com/user-attachments/assets/7abd64f6-f098-47fd-8d8f-a7ea42339b90" />
 
